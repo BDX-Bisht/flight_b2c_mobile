@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New B2C</title>
+    <!-- jquery ui css file link -->
+    <link rel="stylesheet" href="./bootstrap/css/jquery-ui.css">
+    <!-- bootstrap css file link  -->
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+    <!-- main styling css link -->
+    <link rel="stylesheet" href="./css/styles.css">
+    <!-- font awesome file link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- slick slider css files links -->
+    <link rel="stylesheet" type="text/css" href="./slickMain/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="./slickMain/slick/slick-theme.css" />
+</head>
+
+<body style="background: #f8fcff;">
+
+    <!--? Navbar Side Menu Start -->
+    <nav class="mobileNav shadow">
+        <div class="open_navbar">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </nav>
+    <div class="mobileNav_links">
+        <div class="mobileNav_links_child">
+            <div class="d-flex justify-content-end py-2 px-3 border-bottom border-1">
+                <div class="crss_btn open_navbar">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+            </div>
+            <div class="py-3 px-3 d-flex gap-3 align-items-center border-bottom border-1">
+                <!-- <div class="user-img">
+                    <img src="./images/logo.png" alt="Logo.png" loading="lazy" >
+                </div> -->
+                <div class="user-img d-flex align-items-center justify-content-center">
+                    <h1 class="fw-semibold mb-0">D</h1>
+                </div>
+                <div>
+                    <h5 class="mb-0">Hello</h5>
+                    <h5 class="mb-0 fw-semibold">Guest</h5>
+                </div>
+            </div>
+        </div>
+        <div class="mobileNav_close_div open_navbar"></div>
+    </div>
+    <!--? Navbar Side Menu End  -->
+    
+    <!--? Bottom Menu Bar Start -->
+    <div class="bottom_menu">
+        <a href="#">
+            <div class="d-flex flex-column active">
+                <i class="fa-solid fa-house"></i>
+                <p class="mb-0">home</p>
+            </div>
+        </a>
+        <a href="#">
+            <div class="d-flex flex-column">
+                <i class="fa-solid fa-briefcase"></i>
+                <p class="mb-0">my trips</p>
+            </div>
+        </a>
+        <a href="#">
+            <div class="d-flex flex-column gap-0">
+                <img src="./images/discount.gif" alt="offers_img_loading" loading="lazy">
+                <p class="mb-0">Offers</p>
+            </div>
+        </a>
+        <a href="#">
+            <div class="d-flex flex-column">
+                <i class="fa-solid fa-user"></i>
+                <p class="mb-0">Account</p>
+            </div>
+        </a>
+    </div>
+    <!--? Bottom Menu Bar End -->
+
+    <!--? Main Top Nav Section Start  -->
+    <div class="main_section">
+        <a href="#">
+            <div class="main_logo_section">
+                <img src="./images/logo.png" alt="">
+            </div>
+        </a>
+        <div class="main_links_section">
+            <div>
+                <a href="flight.html">
+                    <div class="link_image flight"></div>
+                    <h2>Flight</h2>
+                </a>
+            </div>
+            <div>
+                <a href="#">
+                    <div class="link_image hotel"></div>
+                    <h2>hotels</h2>
+                </a>
+            </div>
+            <div>
+                <a href="#">
+                    <div class="link_image holidays"></div>
+                    <h2>Holidays</h2>
+                </a>
+            </div>
+            <div>
+                <a href="#">
+                    <div class="link_image bus">
+                        <img src="./images/transport.png" alt="bus_img_loading" loading="lazy">
+                    </div>
+                    <h2>Bus</h2>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!--? Main Top Nav Section End  -->
+
+    <!--? Exclusive Deal Start  -->
+    <div class="exclusive_deal_main mt-4 px-3">
+        <div class="d-flex justify-content-between align-items-center">
+            <h2 class="fw-semibold mb-0">Exclusive Deal</h2>
+            <div class="dropdown">
+                <p class="mb-0 fw-semibold efhhewfifewhi dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                    aria-expanded="false" style="color:#19478a;">
+                    Hot Deal
+                </p>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item fw-semibold exclusive_deal" id="hot_exclusive">Hot Deal</a></li>
+                    <li><a class="dropdown-item fw-semibold exclusive_deal" id="flight_exclusive">Flight</a></li>
+                    <li><a class="dropdown-item fw-semibold exclusive_deal" id="hotel_exclusive">Hotel</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="exclusive_deal_images hot_exclusive active">
+            <a href="#">
+                <img src="./images/720hjfeds.webp" alt="">
+            </a>
+            <a href="#">
+                <img src="./images/720hjfeds.webp" alt="">
+            </a>
+            <a href="#">
+                <img src="./images/720hjfeds.webp" alt="">
+            </a>
+        </div>
+        <div class="exclusive_deal_images flight_exclusive">
+            <a href="#">
+                <img src="./images/720ghgh.webp" alt="">
+            </a>
+            <a href="#">
+                <img src="./images/720ghgh.webp" alt="">
+            </a>
+            <a href="#">
+                <img src="./images/720ghgh.webp" alt="">
+            </a>
+        </div>
+        <div class="exclusive_deal_images hotel_exclusive">
+            <a href="#">
+                <img src="./images/720X360Summer.webp" alt="">
+            </a>
+            <a href="#">
+                <img src="./images/720X360Summer.webp" alt="">
+            </a>
+            <a href="#">
+                <img src="./images/720X360Summer.webp" alt="">
+            </a>
+        </div>
+    </div>
+    <!--? Exclusive Deal End  -->
+    
+    <!--? Trending Destination Start  -->
+    <div class="trending_destination px-3 mt-5">
+        <h2 class="fw-semibold mb-0">Trending Destination</h2>
+        <ul class="nav nav-tabs border-0 gap-3 mt-3" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">All</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">International</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">Domestic</button>
+            </li>
+          </ul>
+          <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+                <div class="trending_destination_card_section">
+                    <div class="trending_destination_card">
+                        <a href="">
+                            <div class="card-img">
+                                <img src="./images/m-Dubai.webp" alt="">
+                            </div>
+                            <div class="card-title">
+                                <h4 class="mb-0 fw-semibold">Dubai</h4>
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="trending_destination_card">
+                        <a href="">
+                            <div class="card-img">
+                                <img src="./images/m-Dubai.webp" alt="">
+                            </div>
+                            <div class="card-title">
+                                <h4 class="mb-0 fw-semibold">Dubai</h4>
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="trending_destination_card">
+                        <a href="">
+                            <div class="card-img">
+                                <img src="./images/m-Dubai.webp" alt="">
+                            </div>
+                            <div class="card-title">
+                                <h4 class="mb-0 fw-semibold">Dubai</h4>
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+                <div class="trending_destination_card_section">
+                    <div class="trending_destination_card">
+                        <a href="">
+                            <div class="card-img">
+                                <img src="./images/m-turkey010222.webp" alt="">
+                            </div>
+                            <div class="card-title">
+                                <h4 class="mb-0 fw-semibold">Turkey</h4>
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="trending_destination_card">
+                        <a href="">
+                            <div class="card-img">
+                                <img src="./images/m-turkey010222.webp" alt="">
+                            </div>
+                            <div class="card-title">
+                                <h4 class="mb-0 fw-semibold">Turkey</h4>
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="trending_destination_card">
+                        <a href="">
+                            <div class="card-img">
+                                <img src="./images/m-turkey010222.webp" alt="">
+                            </div>
+                            <div class="card-title">
+                                <h4 class="mb-0 fw-semibold">Turkey</h4>
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
+                <div class="trending_destination_card_section">
+                    <div class="trending_destination_card">
+                        <a href="">
+                            <div class="card-img">
+                                <img src="./images/m-maldives010222.webp" alt="">
+                            </div>
+                            <div class="card-title">
+                                <h4 class="mb-0 fw-semibold">Goa</h4>
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="trending_destination_card">
+                        <a href="">
+                            <div class="card-img">
+                                <img src="./images/m-maldives010222.webp" alt="">
+                            </div>
+                            <div class="card-title">
+                                <h4 class="mb-0 fw-semibold">Goa</h4>
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="trending_destination_card">
+                        <a href="">
+                            <div class="card-img">
+                                <img src="./images/m-maldives010222.webp" alt="">
+                            </div>
+                            <div class="card-title">
+                                <h4 class="mb-0 fw-semibold">Goa</h4>
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+          </div>
+    </div>
+    <!--? Trending Destination End  -->
+
+    <!--? Book With FLyshop Start -->
+    <div class="px-3 mt-5">
+        <h2 class="fw-semibold mb-0">Why book with Flyshop</h2>
+        <div class="mt-3">
+            <div class="support-card">
+                <div class="support-img">
+                    <img src="./images/customer-service.png" alt="support_img_loading" loading="lazy">
+                </div>
+                <div class="d-flex flex-column gap-1">
+                    <h4 class="fw-semibold mb-0">24/7 Customer Support</h4>
+                    <p class="mb-0">We’re here to help whenever you need us</p>
+                </div>
+            </div>
+            <div class="support-card">
+                <div class="support-img">
+                    <img src="./images/international.png" alt="support_img_loading" loading="lazy">
+                </div>
+                <div class="d-flex flex-column gap-1">
+                    <h4 class="fw-semibold mb-0">Reliable Travel Company</h4>
+                    <p class="mb-0">FLyshop Travels is one of the oldest and the largest</p>
+                </div>
+            </div>
+            <div class="support-card">
+                <div class="support-img">
+                    <img src="./images/lowest-price.png" alt="support_img_loading" loading="lazy">
+                </div>
+                <div class="d-flex flex-column gap-1">
+                    <h4 class="fw-semibold mb-0">Assured Lowest Prices</h4>
+                    <p class="mb-0">Flyshop.in assure the lowest fare</p>
+                </div>
+            </div>
+            <div class="support-card">
+                <div class="support-img">
+                    <img src="./images/wallet.png" alt="support_img_loading" loading="lazy">
+                </div>
+                <div class="d-flex flex-column gap-1">
+                    <h4 class="fw-semibold mb-0">Book in advance to save more</h4>
+                    <p class="mb-0">Planning is the primary part of any travel. Whether</p>
+                </div>
+            </div>
+        </div>
+        <div class="mt-3">
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="background: white;">
+                        Why Flyshop Travels?
+                    </button>
+                  </h2>
+                  <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam repudiandae libero eos architecto a ullam hic fuga, nemo in vitae dolorem impedit tempora neque veritatis maxime explicabo molestiae nihil aut corrupti sequi. Maiores quasi quod blanditiis aut praesentium dolorum illum eveniet, obcaecati dolores iusto! Sapiente molestiae ut ab tenetur at?
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button fw-semibold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" style="background: white;">
+                        Company Information
+                    </button>
+                  </h2>
+                  <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui quisquam ipsam sunt aliquid quis consequuntur quo non quod suscipit modi unde pariatur quaerat similique inventore dolores sint eius numquam velit omnis accusantium fugiat impedit, facilis molestiae est? Quo, suscipit corrupti quos quia molestias ad voluptates omnis voluptate beatae dolorem magnam?
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button fw-semibold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" style="background: white;">
+                      Flyshop On Mobile
+                    </button>
+                  </h2>
+                  <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio nihil aut dolor beatae nobis repellendus, optio ullam quam quae eligendi, molestiae fugiat sequi iusto laudantium animi dolores ad nostrum vero! Neque similique minima blanditiis non tenetur molestias nam error eaque perspiciatis! Sunt repellendus nihil rerum illo excepturi eaque a tenetur.
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </div>
+    </div>
+    <!--? Book With FLyshop End -->
+
+    <!--? footer Seaction Start -->
+    <footer class="px-5 mt-5" style="margin-bottom: 7rem;">
+        <h5 class="fs-6 text-center fw-semibold">Copyright © <span class="latestYear"></span> Flyshop Online Booking Company Pvt. Ltd. All Rights Reserved.</h5>
+    </footer>
+    <!--? footer Seaction End -->
+
+    <script src="./bootstrap/js/jquery-3.7.1.min.js"></script>
+    <script src="./bootstrap/js/jquery-migrate-3.4.1.min.js"></script>
+    <script src="./bootstrap/js/jquery-ui.js"></script>
+    <script src="./bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="./slickMain/slick/slick.min.js"></script>
+    <script src="./js/main.js" defer></script>
+
+    <script>
+        $(".open_navbar").click(function () {
+            $(".mobileNav_close_div").toggleClass("active")
+            let classNO = $(".mobileNav_close_div").hasClass("active")
+            if(classNO){
+                $(".mobileNav_close_div").css("transition-delay","0.35s")
+            }else{
+                $(".mobileNav_close_div").css("transition-delay","0s")
+            }
+            $(".mobileNav_links").toggleClass("active")
+        })
+
+        $(".exclusive_deal").click(function(){
+            let id = $(this).attr("id")
+            $(".efhhewfifewhi").text($(this).text())
+            $(".exclusive_deal_images").removeClass("active");
+            $(`.${id}`).addClass("active")
+        })
+
+        const currentYear = new Date().getFullYear()
+        $(".latestYear").text(currentYear)
+
+    </script>
+</body>
+
+</html>

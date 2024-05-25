@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New B2C</title>
+    <!-- jquery ui css file link -->
+    <link rel="stylesheet" href="./pickadate.js-3.6.2/lib/themes/default.css">
+    <link rel="stylesheet" href="./pickadate.js-3.6.2/lib/themes/default.date.css">
+    <link rel="stylesheet" href="./bootstrap/css/jquery-ui.css">
+    <!-- bootstrap css file link  -->
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+    <!-- main styling css link -->
+    <link rel="stylesheet" href="./css/styles.css">
+    <!-- font awesome file link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- slick slider css files links -->
+    <link rel="stylesheet" type="text/css" href="./slickMain/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="./slickMain/slick/slick-theme.css" />
+</head>
+
+<body style="background: #f8fcff;">
+
+    <!--? Flight Search Section Start -->
+    <div class="flight_search_section px-3 py-3">
+        <div class="d-flex align-items-center gap-3">
+            <a href="index.html"><i class="fa-solid fa-arrow-left fs-4"></i></a>
+            <h3 class="fw-semibold mb-0">Search Flight</h3>
+        </div>
+        <div class="way_trip">
+            <div class="trip active" id="one">One Way</div>
+            <div class="trip" id="round">Round Trip</div>
+        </div>
+        <form action="#">
+            <div class="mt-3">
+                <div class="bhtrbgbhegbh">
+                    <div class="d-flex gap-3 align-items-center grgrregr_from" id="fromgrgr">
+                        <i class="fa-solid fa-plane-departure"></i>
+                        <div class="d-flex flex-column">
+                            <p>From</p>
+                            <input type="text" class="fromCity" name="fromCity" readonly value="Mumbai">
+                            <input type="text" class="city fromFullCity" name="fromFullCity" readonly value="Chhatrapati Shivaji International Airport">
+                        </div>
+                    </div>
+                    <input type="text" class="fromCityCode" name="fromCityCode" readonly value="BOM" style="width: 12%;text-align:right;">
+                    <div class="rotate">
+                        <i class="fa-solid fa-rotate"></i>
+                    </div>
+                </div>
+                <div class="bhtrbgbhegbh grgrregr_to mt-3" id="tobrbeeth">
+                    <div class="d-flex gap-3 align-items-center">
+                        <i class="fa-solid fa-plane-arrival"></i>
+                        <div class="d-flex flex-column">
+                            <p>To</p>
+                            <input type="text" class="toCity" name="toCity" readonly value="Delhi">
+                            <input type="text" class="city toFullCity" name="toFullCity" readonly value="Indira Gandhi International Airport">
+                        </div>
+                    </div>
+                    <input type="text" class="toCityCode" name="toCityCode" readonly value="DEL" style="width: 12%;text-align:right;">
+                </div>
+                <div class="bhtrbgbhegbh mt-3 py-3">
+                    <div class="d-flex align-items-center justify-content-between w-100 pe-4">
+                        <div class="d-flex align-items-center gap-3 w-50">
+                            <i class="fa-solid fa-calendar-days"></i>
+                            <div class="d-flex flex-column">
+                                <p>Departure Date</p>
+                                <input type="text" class="flightDate" readonly style="width: 6em;">
+                            </div>
+                        </div>
+                        <div style="width: 2px;background: #cccc;height: 3em;"></div>
+                        <div class="align-items-center gap-3 w-50 ps-4 oneRound" style="display: none;">
+                            <i class="fa-solid fa-calendar-days"></i>
+                            <div class="d-flex flex-column">
+                                <p>Return Date</p>
+                                <input type="text" class="flightDate" readonly style="width: 6em;">
+                            </div>
+                        </div>
+                        <div class="align-items-center gap-3 w-50 ps-4 moreRound" style="display: flex;">
+                            <i class="fa-solid fa-calendar-days"></i>
+                            <div class="d-flex flex-column">
+                                <span style="font-size: 12px;color:var(--btn-color);text-align: center;">+ Add Return Date</span>
+                                <p class="text-center" style="line-height: 1;">Save more on round trips</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bhtrbgbhegbh travellers_Open mt-3 py-3">
+                    <div class="d-flex gap-3 align-items-center">
+                        <i class="fa-solid fa-user-group"></i>
+                        <div class="d-flex flex-column">
+                            <p>Travellers & Class</p>
+                            <input type="text" class="travellers_Class" readonly name="travellers_Class" value="1 Travellers | Economy" style="width: 16em;">
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-3">
+                    <div class="d-flex algin-items-end gap-1">
+                        <h6 class="fw-bold mb-0" style="font-size: 16px;">Special Fare</h6>
+                        <span style="color: #646464cc;font-weight: 600;font-size: 13px;">Optional</span>
+                    </div>
+                    <div class="uttujvgjhyvkyh mt-3 d-flex gap-3">
+                        <input type="radio" name="specialFare" value="defence" id="defence">
+                        <label for="defence">Defence</label>
+                        <input type="radio" name="specialFare" value="defence" id="student">
+                        <label for="student">Student</label>
+                    </div>
+                </div>
+                <div class="mt-3">
+                    <div class="d-flex align-items-center gap-2 justify-content-center form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked">
+                        <label class="form-check-label fw-semibold fs-5" for="flexSwitchCheckChecked">Not Stop Flights</label>                      
+                    </div>
+                </div>
+                <div class="brbrgkgbugr">
+                    <button>Search Flight</button>
+                </div>
+            </div> 
+        </form>
+    </div>
+    <!--? Flight Search Section End -->
+
+    <!--? Travellers Select Section Start  -->
+    <div class="travellers_counter_details">
+        <div class="travellers_Open"></div>
+        <div>
+            <div class="d-flex justify-content-between align-items-center px-2 py-3 border-1 border-bottom">
+                <h3 class="mb-0 fw-semibold">Travellers & Class</h3>
+                <i class="fa-solid fa-xmark fs-2 travellers_Open"></i>
+            </div>
+            <div class="vvhjvhvhjvhj">
+                <div class="d-flex flex-column">
+                    <p class="fw-semibold mb-0">Adults</p>
+                    <span>Above 12 Years</span>
+                </div>
+                <div>
+                    <div onclick="travellerToggle('adultT','-','1','9')">-</div>
+                    <div class="adultT">1</div>
+                    <div onclick="travellerToggle('adultT','+','1','9')">+</div>
+                </div>
+            </div>
+            <div class="vvhjvhvhjvhj">
+                <div class="d-flex flex-column">
+                    <p class="fw-semibold mb-0">Children</p>
+                    <span>2-12 Years</span>
+                </div>
+                <div>
+                    <div onclick="travellerToggle('childT','-','0','8')">-</div>
+                    <div class="childT">0</div>
+                    <div onclick="travellerToggle('childT','+','0','8')">+</div>
+                </div>
+            </div>
+            <div class="vvhjvhvhjvhj">
+                <div class="d-flex flex-column">
+                    <p class="fw-semibold mb-0">Infant</p>
+                    <span>0-23 Months</span>
+                </div>
+                <div>
+                    <div onclick="travellerToggle('infantT','-','0','1')">-</div>
+                    <div class="infantT">0</div>
+                    <div onclick="travellerToggle('infantT','+','0','1')">+</div>
+                </div>
+            </div>
+            <div class="jtvgkkfyu">
+                <div class="jtvgkkfyu_child active">Economy</div>
+                <div class="jtvgkkfyu_child">Premium Economy</div>
+                <div class="jtvgkkfyu_child">Business</div>
+            </div>
+            <div class="yujvyvyuyuv">
+                <button class="travellers_Open">Apply</button>
+            </div>
+        </div>
+    </div>
+    <!--? Travellers Select Section End  -->
+
+    <!--? Flight Search Section Start  -->
+    <div class="flight_airport_section flight_airport_section_from">
+        <div>
+            <div class="kbwgwguwguowg4u">
+                <i class="fa-solid fa-plane-departure fs-6"></i>
+                <div class="d-flex flex-column">
+                    <label>From</label>
+                    <input type="text" placeholder="From" class="fromgrgr" value="Mumbai">
+                </div>                  
+            </div>
+        </div>
+        <div class="mt-4">
+            <div class="bjkgbgugru" onclick="flightSelectionFunction('Mumbai','Chhatrapati Shivaji International Airport','BOM')">
+                <div>
+                    <div class="bukb">BOM</div>
+                    <div>
+                        <p>Mumbai</p>
+                        <span>Chhatrapati Shivaji International Airport</span>
+                    </div>
+                </div>
+                <div>
+                    <span>India</span>
+                    <img src="./images/india.svg" alt="">
+                </div>
+            </div>
+            <div class="bjkgbgugru" onclick="flightSelectionFunction('Toronto','All Airports Toronto','YTO')">
+                <div>
+                    <div class="bukb">YTO</div>
+                    <div>
+                        <p>Toronto</p>
+                        <span>All Airports Toronto</span>
+                    </div>
+                </div>
+                <div>
+                    <span>Canada</span>
+                    <img src="./images/canada.svg" alt="">
+                </div>
+            </div>
+            <div class="bjkgbgugru" onclick="flightSelectionFunction('Delhi','Indira Gandhi International Airport','DEL')">
+                <div>
+                    <div class="bukb">DEl</div>
+                    <div>
+                        <p>Delhi</p>
+                        <span>Indira Gandhi International Airport</span>
+                    </div>
+                </div>
+                <div>
+                    <span>India</span>
+                    <img src="./images/india.svg" alt="">
+                </div>
+            </div>
+            <div class="bjkgbgugru" onclick="flightSelectionFunction('Dubai','Dubai','DXB')">
+                <div>
+                    <div class="bukb">DXB</div>
+                    <div>
+                        <p>Dubai</p>
+                        <span>Dubai</span>
+                    </div>
+                </div>
+                <div>
+                    <span>UAE</span>
+                    <img src="./images/uae.svg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--? Flight Search Section End  -->
+
+    <!--? Flight Search Section Start  -->
+    <div class="flight_airport_section flight_airport_section_to">
+        <div>
+            <div class="kbwgwguwguowg4u mt-2">
+                <i class="fa-solid fa-plane-arrival fs-6"></i>
+                <div class="d-flex flex-column">
+                    <label>To</label>
+                    <input type="text" placeholder="From" class="tobrbeeth" value="Delhi">
+                </div>                  
+            </div>
+        </div>
+        <div class="mt-4">
+            <div class="bjkgbgugru" onclick="flightSelectionFunction('Mumbai','Chhatrapati Shivaji International Airport','BOM')">
+                <div>
+                    <div class="bukb">BOM</div>
+                    <div>
+                        <p>Mumbai</p>
+                        <span>Chhatrapati Shivaji International Airport</span>
+                    </div>
+                </div>
+                <div>
+                    <span>India</span>
+                    <img src="./images/india.svg" alt="">
+                </div>
+            </div>
+            <div class="bjkgbgugru" onclick="flightSelectionFunction('Toronto','All Airports Toronto','YTO')">
+                <div>
+                    <div class="bukb">YTO</div>
+                    <div>
+                        <p>Toronto</p>
+                        <span>All Airports Toronto</span>
+                    </div>
+                </div>
+                <div>
+                    <span>Canada</span>
+                    <img src="./images/canada.svg" alt="">
+                </div>
+            </div>
+            <div class="bjkgbgugru" onclick="flightSelectionFunction('Delhi','Indira Gandhi International Airport','DEL')">
+                <div>
+                    <div class="bukb">DEl</div>
+                    <div>
+                        <p>Delhi</p>
+                        <span>Indira Gandhi International Airport</span>
+                    </div>
+                </div>
+                <div>
+                    <span>India</span>
+                    <img src="./images/india.svg" alt="">
+                </div>
+            </div>
+            <div class="bjkgbgugru" onclick="flightSelectionFunction('Dubai','Dubai','DXB')">
+                <div>
+                    <div class="bukb">DXB</div>
+                    <div>
+                        <p>Dubai</p>
+                        <span>Dubai</span>
+                    </div>
+                </div>
+                <div>
+                    <span>UAE</span>
+                    <img src="./images/uae.svg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--? Flight Search Section End  -->
+
+    <!--? Exclusive Deal Start  -->
+    <div class="exclusive_deal_main mt-4 px-3">
+        <div class="d-flex justify-content-between align-items-center">
+            <h2 class="fw-semibold mb-0">Exclusive Deal</h2>
+            <div class="dropdown">
+                <p class="mb-0 fw-semibold efhhewfifewhi dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                    aria-expanded="false" style="color:#19478a;">
+                    Hot Deal
+                </p>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item fw-semibold exclusive_deal" id="hot_exclusive">Hot Deal</a></li>
+                    <li><a class="dropdown-item fw-semibold exclusive_deal" id="flight_exclusive">Flight</a></li>
+                    <li><a class="dropdown-item fw-semibold exclusive_deal" id="hotel_exclusive">Hotel</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="exclusive_deal_images hot_exclusive active">
+            <a href="#">
+                <img src="./images/720hjfeds.webp" alt="">
+            </a>
+            <a href="#">
+                <img src="./images/720hjfeds.webp" alt="">
+            </a>
+            <a href="#">
+                <img src="./images/720hjfeds.webp" alt="">
+            </a>
+        </div>
+        <div class="exclusive_deal_images flight_exclusive">
+            <a href="#">
+                <img src="./images/720ghgh.webp" alt="">
+            </a>
+            <a href="#">
+                <img src="./images/720ghgh.webp" alt="">
+            </a>
+            <a href="#">
+                <img src="./images/720ghgh.webp" alt="">
+            </a>
+        </div>
+        <div class="exclusive_deal_images hotel_exclusive">
+            <a href="#">
+                <img src="./images/720X360Summer.webp" alt="">
+            </a>
+            <a href="#">
+                <img src="./images/720X360Summer.webp" alt="">
+            </a>
+            <a href="#">
+                <img src="./images/720X360Summer.webp" alt="">
+            </a>
+        </div>
+    </div>
+    <!--? Exclusive Deal End  -->
+
+    <!--? Book With FLyshop Start -->
+    <div class="mt-5">
+        <div class="mt-3">
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item border-0">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button fw-semibold" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"
+                            style="background: white;">
+                            Why Flyshop Travels?
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam repudiandae libero eos
+                            architecto a ullam hic fuga, nemo in vitae dolorem impedit tempora neque veritatis maxime
+                            explicabo molestiae nihil aut corrupti sequi. Maiores quasi quod blanditiis aut praesentium
+                            dolorum illum eveniet, obcaecati dolores iusto! Sapiente molestiae ut ab tenetur at?
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item border-0">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button fw-semibold collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"
+                            style="background: white;">
+                            Company Information
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui quisquam ipsam sunt aliquid
+                            quis consequuntur quo non quod suscipit modi unde pariatur quaerat similique inventore
+                            dolores sint eius numquam velit omnis accusantium fugiat impedit, facilis molestiae est?
+                            Quo, suscipit corrupti quos quia molestias ad voluptates omnis voluptate beatae dolorem
+                            magnam?
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item border-0">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button fw-semibold collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree"
+                            style="background: white;">
+                            Flyshop On Mobile
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio nihil aut dolor beatae
+                            nobis repellendus, optio ullam quam quae eligendi, molestiae fugiat sequi iusto laudantium
+                            animi dolores ad nostrum vero! Neque similique minima blanditiis non tenetur molestias nam
+                            error eaque perspiciatis! Sunt repellendus nihil rerum illo excepturi eaque a tenetur.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--? Book With FLyshop End -->
+
+    <script src="./bootstrap/js/jquery-3.7.1.min.js"></script>
+    <script src="./pickadate.js-3.6.2/lib/picker.js"></script>
+    <script src="./pickadate.js-3.6.2/lib/legacy.js"></script>
+    <script src="./pickadate.js-3.6.2/lib/picker.date.js"></script>
+    <script src="./bootstrap/js/jquery-migrate-3.4.1.min.js"></script>
+    <script src="./bootstrap/js/jquery-ui.js"></script>
+    <script src="./bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="./slickMain/slick/slick.min.js"></script>
+    <script src="./js/main.js" defer></script>
+
+    <script>
+
+        $(".exclusive_deal").click(function(){
+            let id = $(this).attr("id")
+            $(".efhhewfifewhi").text($(this).text())
+            $(".exclusive_deal_images").removeClass("active");
+            $(`.${id}`).addClass("active")
+        })
+
+        $(".oneRound").css("display","none")
+        $(".trip").click(function () {
+            let val = $(this).attr("id")
+            $(".trip").removeClass("active")
+            $(this).addClass("active")
+            if(val=="round"){
+                $(".oneRound").css("display","flex")
+                $(".moreRound").css("display","none")
+            }
+            if(val=="one"){
+                $(".oneRound").css("display","none")
+                $(".moreRound").css("display","flex")
+            }
+        })
+
+        $(".moreRound").click(function(){
+            $(".oneRound").css("display","flex")
+            $(".moreRound").css("display","none")
+            $("#round").addClass("active")
+            $("#one").removeClass("active")
+        })
+
+        const todayDate = new Date().toLocaleString("en-GB", {day: "2-digit",month: "2-digit",year: "numeric",}).split(",")[0];
+        $('.flightDate').pickadate({today: '',clear: '',close: 'Cancel',format: 'dd/mm/yyyy',min:todayDate,}).val(todayDate)
+
+        $(".rotate").click(function(){
+            let fromCity = $(".fromCity").val()
+            let fromFullCity = $(".fromFullCity").val()
+            let fromCityCode = $(".fromCityCode").val()
+            $(".fromCity").val($(".toCity").val()) 
+            $(".fromFullCity").val($(".toFullCity").val())
+            $(".fromCityCode").val($(".toCityCode").val())
+            $(".toCity").val(fromCity) 
+            $(".toFullCity").val(fromFullCity)
+            $(".toCityCode").val(fromCityCode)
+        })
+
+        $(".travellers_Open").click(function(){ 
+            $(".travellers_counter_details").toggleClass("active");
+            let jgrjgrk = $(".travellers_counter_details").hasClass("active")
+            if (jgrjgrk) {
+                $(document.body).css("overflow","hidden")
+            }else{
+                $(document.body).css("overflow","auto")
+            }
+        })
+   
+        let totalPassenger = 1;
+        let totalPassengerC = 0;
+        let totalPassengerI = 0;
+        let passengetClass = "Economy";
+
+        function bbbuiguwgrbuiw(){
+            $(".travellers_Class").val(`${totalPassenger+totalPassengerC+totalPassengerI} Travellers | ${passengetClass}`)
+        }
+
+        $(".jtvgkkfyu_child").click(function(){
+            $(".jtvgkkfyu_child").removeClass("active");
+            $(this).addClass("active");
+            passengetClass = $(this).text()
+            bbbuiguwgrbuiw();
+        })
+
+        function travellerToggle(main,math,min,max){
+            let num = Number(min);
+            let val = Number($("."+main).text());
+            if(math=="+"){
+                if(val<max){
+                    $("."+main).text(val+1)
+                }
+            }
+            if(math=="-"){
+                if(val>min){
+                    $("."+main).text(val-1)
+                }
+            }
+            if(main == "adultT"){
+                totalPassenger = Number($("."+main).text());
+            }
+            if(main =="childT"){
+                totalPassengerC = Number($("."+main).text())
+            }
+            if (main == "infantT") {
+                totalPassengerI = Number($("."+main).text())
+            }
+            bbbuiguwgrbuiw()
+        }
+
+        let HorhaHai1 = false;
+        let HorhaHai2 = false;
+
+        $(".grgrregr_from").click(function(){
+            let val = $(this).attr("id");
+            $(".flight_airport_section_from").toggleClass("active");
+            $("."+val).focus()
+            $("."+val).val("")
+            HorhaHai1 = true;
+        })
+
+        $(".grgrregr_to").click(function(){
+            let val = $(this).attr("id");
+            $(".flight_airport_section_to").toggleClass("active");
+            $("."+val).focus()
+            $("."+val).val("")
+            HorhaHai2 = true;
+        })
+
+        const fromInput = document.querySelector(".fromgrgr");
+        const toInput = document.querySelector(".tobrbeeth");
+
+        fromInput.addEventListener('keyup',()=>{HorhaHai1 = true;})
+        toInput.addEventListener('keyup',()=>{HorhaHai2 = true;})
+        fromInput.addEventListener('click',()=>{HorhaHai1 = true;})
+        toInput.addEventListener('click',()=>{HorhaHai2 = true;})
+
+        function flightSelectionFunction(cityName,fullCity,cityCode){
+            $(".flight_airport_section").removeClass("active");
+            if(HorhaHai1){
+                $(".fromgrgr").val(cityName)
+                $(".fromCity").val(cityName)
+                $(".fromFullCity").val(fullCity)
+                $(".fromCityCode").val(cityCode)
+            }
+            if (HorhaHai2) {
+                $(".tobrbeeth").val(cityName)
+                $(".toCity").val(cityName)
+                $(".toFullCity").val(fullCity)
+                $(".toCityCode").val(cityCode)
+            }
+            setTimeout(() => {
+                HorhaHai1 = false;
+                HorhaHai2 = false
+            }, 1000);
+        }
+
+   </script>
+</body>
+
+</html>
