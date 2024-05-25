@@ -202,7 +202,7 @@ img{width: 100%;height: 100%;object-fit: cover;}
 .flight_timing_section span{font-size: 13px;font-weight: 600;line-height: 1;color:#808080cc ;}
 .stop-section{display: flex;align-items: center;flex-direction: column;gap: 5px;width:30%}
 .stop-section p{font-size: 11px !important;}
-.stop-section span{font-size: 10px !important;}
+.stop-section span{font-size: 10px !important;text-align: center;}
 .stop-section .stop-area{width: 100%;height: 3px;background: red;position: relative;}
 .stop-section .stop-area.non-stop{background: #39c508;}
 .stop-section .stop-area.one-stop{background: #ff9c00;}
