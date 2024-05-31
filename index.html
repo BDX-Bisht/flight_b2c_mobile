@@ -29,51 +29,136 @@
         </div>
     </nav>
     <div class="mobileNav_links">
-        <div class="mobileNav_links_child">
+        <div class="mobileNav_links_child pb-5">
             <div class="d-flex justify-content-end py-2 px-3 border-bottom border-1">
                 <div class="crss_btn open_navbar">
                     <i class="fa-solid fa-xmark"></i>
                 </div>
             </div>
             <div class="py-3 px-3 d-flex gap-3 align-items-center border-bottom border-1">
-                <!-- <div class="user-img">
-                    <img src="./images/logo.png" alt="Logo.png" loading="lazy" >
-                </div> -->
-                <div class="user-img d-flex align-items-center justify-content-center">
-                    <h1 class="fw-semibold mb-0">D</h1>
+                <div class="user-img">
+                    <img src="./images/people.png" alt="Logo.png" loading="lazy" >
                 </div>
+                <!-- <div class="user-img d-flex align-items-center justify-content-center">
+                    <h1 class="fw-semibold mb-0">D</h1>
+                </div> -->
                 <div>
                     <h5 class="mb-0">Hello</h5>
                     <h5 class="mb-0 fw-semibold">Guest</h5>
                 </div>
             </div>
+            <div class="py-3 px-4 border-bottom">
+                <a class="side_nav_link" href="#">
+                    <div class="d-flex align-items-center gap-3">
+                        <i class="fa-solid fa-suitcase"></i>
+                        <h6>Deals and Offers</h6>
+                    </div>
+                    <i class="fa-solid fa-chevron-right"></i>
+                </a>
+            </div>
+            <div class="py-3 px-4 border-bottom">
+                <a class="side_nav_link" href="#">
+                    <div class="d-flex align-items-center gap-3">
+                        <i class="fa-solid fa-book"></i>
+                        <h6>My Bookings</h6>
+                    </div>
+                    <i class="fa-solid fa-chevron-right"></i>
+                </a>
+            </div>
+            <div class="py-3 px-4 border-bottom">
+                <a class="side_nav_link" href="#">
+                    <div class="d-flex align-items-center gap-3">
+                        <i class="fa-solid fa-wallet"></i>
+                        <h6>My Wallet Balance</h6>
+                    </div>
+                    <i class="fa-solid fa-chevron-right"></i>
+                </a>
+            </div>
+            <div class="py-3 px-4 border-bottom">
+                <ul class="side_nav_ul">
+                    <li><a href="#">View Cancellations</a></li>
+                    <li><a href="#">Make Payment</a></li>
+                    <li><a href="#">Manage Travellers</a></li>
+                    <li><a href="#">Web Check-in</a></li>
+                    <li><a href="#">Send Feedback</a></li>
+                    <li><a href="#">Change Password</a></li>
+                </ul>
+            </div>
+            <div class="py-3 px-4 border-bottom">
+                <a class="side_nav_link" href="#">
+                    <div class="d-flex align-items-center gap-3">
+                        <i class="fa-solid fa-user"></i>
+                        <h6 class="fw-normal">My Profile</h6>
+                    </div>
+                    <i class="fa-solid fa-chevron-right"></i>
+                </a>
+            </div>
+            <div class="py-3 px-4 border-bottom">
+                <a class="side_nav_link" href="#">
+                    <div class="d-flex align-items-center gap-3">
+                        <i class="fa fa-address-card"></i>
+                        <h6 class="fw-normal">Contact Us</h6>
+                    </div>
+                    <i class="fa-solid fa-chevron-right"></i>
+                </a>
+            </div>
+            <div class="py-3 px-4 border-bottom">
+                <a class="side_nav_link" href="#">
+                    <div class="d-flex align-items-center gap-3">
+                        <i class="fa-solid fa-right-from-bracket"></i>
+                        <h6 class="fw-normal">Log Out</h6>
+                    </div>
+                    <i class="fa-solid fa-chevron-right"></i>
+                </a>
+            </div>
         </div>
         <div class="mobileNav_close_div open_navbar"></div>
     </div>
     <!--? Navbar Side Menu End  -->
+
+    <!--? Section Before Login Start  -->
+    <div class="before_login">
+        <div class="close_login"></div>
+        <div class="login_panel">
+            <div class="p-3 border-bottom">
+                <div class="d-flex align-items-center gap-3">
+                    <i class="fa-solid fa-xmark fs-5 close_login"></i>
+                    <h5 class="mb-0 fw-semibold">Login to Flyshop</h5>
+                </div>
+            </div>
+            <div class="p-3 d-flex flex-column gap-3">
+                <input type="text" placeholder="Email Id / Mobile Number">
+                <button>Continue</button>
+            </div>
+            <div class="p-3">
+                <p>By proceeding, you agree to Flyshop <span>Privacy Policy</span> and <span>Terms of Use</span>. </p>
+            </div>
+        </div>
+    </div>
+    <!--? Section Before Login End  -->
     
     <!--? Bottom Menu Bar Start -->
     <div class="bottom_menu">
         <a href="#">
-            <div class="d-flex flex-column active">
+            <div class="d-flex flex-column bottom_menu_child active">
                 <i class="fa-solid fa-house"></i>
                 <p class="mb-0">home</p>
             </div>
         </a>
         <a href="#">
-            <div class="d-flex flex-column">
+            <div class="d-flex flex-column bottom_menu_child">
                 <i class="fa-solid fa-briefcase"></i>
                 <p class="mb-0">my trips</p>
             </div>
         </a>
-        <a href="#">
-            <div class="d-flex flex-column gap-0">
+        <a href="offers.html">
+            <div class="d-flex flex-column bottom_menu_child gap-0">
                 <img src="./images/discount.gif" alt="offers_img_loading" loading="lazy">
                 <p class="mb-0">Offers</p>
             </div>
         </a>
         <a href="#">
-            <div class="d-flex flex-column">
+            <div class="d-flex flex-column bottom_menu_child">
                 <i class="fa-solid fa-user"></i>
                 <p class="mb-0">Account</p>
             </div>
@@ -399,12 +484,27 @@
     <script src="./js/main.js" defer></script>
 
     <script>
+
+        document.addEventListener('DOMContentLoaded',()=>{
+            setTimeout(() => {
+                $(".before_login").addClass("active")
+                let val = $(".before_login").hasClass("active");
+                if(val){
+                    $(document.body).css("overflow","hidden")
+                }else{
+                    $(document.body).css("overflow","auto")
+                }
+            }, 1000);
+        })
+        
         $(".open_navbar").click(function () {
             $(".mobileNav_close_div").toggleClass("active")
             let classNO = $(".mobileNav_close_div").hasClass("active")
             if(classNO){
+                $(document.body).css("overflow","hidden")
                 $(".mobileNav_close_div").css("transition-delay","0.35s")
             }else{
+                $(document.body).css("overflow","auto")
                 $(".mobileNav_close_div").css("transition-delay","0s")
             }
             $(".mobileNav_links").toggleClass("active")
@@ -419,6 +519,31 @@
 
         const currentYear = new Date().getFullYear()
         $(".latestYear").text(currentYear)
+
+        $(".close_login").click(function(){
+            $(".before_login").toggleClass("active");
+            let val = $(".before_login").hasClass("active");
+            if(val){
+                $(document.body).css("overflow","hidden")
+            }else{
+                $(document.body).css("overflow","auto")
+            }
+        })
+        
+        $(".bottom_menu_child").click(function(){
+            $(".bottom_menu_child").removeClass("active");
+            $(this).addClass("active");
+            let home = this.childNodes[3].innerText
+            if(home != "HOME" && home != "OFFERS"){
+                $(".before_login").toggleClass("active");
+                let val = $(".before_login").hasClass("active");
+                if(val){
+                    $(document.body).css("overflow","hidden")
+                }else{
+                    $(document.body).css("overflow","auto")
+                }
+            }
+        })
 
     </script>
 </body>
